@@ -1,18 +1,30 @@
 # WebGPU Precompiled Binaries
 
-This pulls (Elie Michel's `WebGPU-distribution` package)[https://github.com/eliemichel/WebGPU-distribution] and installs the binaries to `/opt/webgpu-dist` (by default).
+This pulls [Elie Michel's `WebGPU-distribution` package](https://github.com/eliemichel/WebGPU-distribution) and installs the binaries to `/opt/webgpu-dist` (by default).
 
 ## Motivation
 
 Elie's original repository relies on CMake `FetchContent` to fetch the either Dawn or wgpu-native. This is likely fine for most cases, but if you frequently trash your build directory, or are building from a Docker/Podman container, then installing the libraries into your sysroot is more efficient.
 
-## Building/Installing
+## Building/Installing: Automatic (Debian Only)
+
+One-stop setup-build-install:
+
+```
+auto-build-install.sh
+```
+
+This will install the requisite libaries using `apt`, configure, build and install to `/opt/webgpu-dist`, for all enabled/supported architectures available to your system. (Use `dpkg --add-architecture` to build for foreign architectures.)
+
+This script takes an optional path argument if you wish to customize the install destination.
+
+## Building/Installing: Manual
 
 Set up:
 
-* Clone this repository
-* Install the dependencies (Debian packages are provided in `apt-packages.lst`)
-* Install dependencies for alternative targets, e.g. `arm64`
+* Clone this repository.
+* Install the dependencies (Debian packages are provided in `auto-build-install.sh`), including for foreign architectures.
+* Run `cmake --list-presets` to see which targets are available.
 
 Build a single target:
 
@@ -20,33 +32,6 @@ Build a single target:
 cmake -S . --preset <preset>
 cmake --build --preset <preset> --config Release
 cmake --install build/<triple> --prefix <destination>
-```
-
-Build and all projects:
-
-* Run `build.sh`
-
-Presets:
-
-```
-# Linux AMD64
-linux-x86_64-wgpu
-linux-x86_64-wgpu-static
-linux-x86_64-dawn
-
-# Linux ARM64
-linux-aarch64-wgpu
-linux-aarch64-wgpu-static
-linux-aarch64-dawn
-
-# Web
-emscripten
-
-# Windows
-windows-msvc-wgpu
-windows-msvc-wgpu-static
-windows-mingw64-wgpu
-windows-mingw64-wgpu-static
 ```
 
 ## Usage
@@ -76,6 +61,7 @@ For example, if you are building for Windows with wgpu-static, use:
 * The default install directory is not configurable when batch-building
 * The Visual Studio (MSVC) builds are untested
 * The MSVC builds also cannot be run on Linux build hosts
+* `i686` support for Windows
 
 # Known Issues
 
