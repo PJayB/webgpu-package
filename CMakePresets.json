@@ -7,7 +7,7 @@
     },
     "configurePresets": [
         {
-            "name": "dawn/x86_64-linux-gnu",
+            "name": "dawn/linux-x86_64",
             "generator": "Ninja",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-linux-gnu-gcc.cmake",
             "cacheVariables": {
@@ -15,7 +15,7 @@
             }
         },
         {
-            "name": "wgpu/x86_64-linux-gnu",
+            "name": "wgpu/linux-x86_64",
             "generator": "Ninja",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-linux-gnu-gcc.cmake",
             "cacheVariables": {
@@ -23,7 +23,7 @@
             }
         },
         {
-            "name": "wgpu-static/x86_64-linux-gnu",
+            "name": "wgpu-static/linux-x86_64",
             "generator": "Ninja",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-linux-gnu-gcc.cmake",
             "cacheVariables": {
@@ -31,7 +31,7 @@
             }
         },
         {
-            "name": "dawn/aarch64-linux-gnu",
+            "name": "dawn/linux-aarch64",
             "generator": "Ninja",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/aarch64-linux-gnu-gcc.cmake",
             "cacheVariables": {
@@ -39,7 +39,7 @@
             }
         },
         {
-            "name": "wgpu/aarch64-linux-gnu",
+            "name": "wgpu/linux-aarch64",
             "generator": "Ninja",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/aarch64-linux-gnu-gcc.cmake",
             "cacheVariables": {
@@ -47,7 +47,7 @@
             }
         },
         {
-            "name": "wgpu-static/aarch64-linux-gnu",
+            "name": "wgpu-static/linux-aarch64",
             "generator": "Ninja",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/aarch64-linux-gnu-gcc.cmake",
             "cacheVariables": {
@@ -55,21 +55,21 @@
             }
         },
         {
-            "name": "emscripten/wasm32-emscripten",
+            "name": "emscripten/emscripten-wasm32",
             "generator": "Ninja",
             "cacheVariables": {
                 "WEBGPU_BACKEND": "EMSCRIPTEN"
             }
         },
         {
-            "name": "dawn/x86_64-windows",
+            "name": "dawn/windows-x86_64",
             "generator": "Visual Studio 17 2022",
             "cacheVariables": {
                 "WEBGPU_BACKEND": "DAWN"
             }
         },
         {
-            "name": "wgpu/x86_64-windows",
+            "name": "wgpu/windows-x86_64",
             "generator": "Ninja",
             "cacheVariables": {
                 "CMAKE_C_COMPILER_FORCED": "1",
@@ -80,7 +80,7 @@
             }
         },
         {
-            "name": "wgpu-static/x86_64-windows",
+            "name": "wgpu-static/windows-x86_64",
             "generator": "Ninja",
             "cacheVariables": {
                 "CMAKE_C_COMPILER_FORCED": "1",
@@ -93,44 +93,44 @@
     ],
     "buildPresets": [
         {
-            "name": "dawn/x86_64-linux-gnu",
-            "configurePreset": "dawn/x86_64-linux-gnu"
+            "name": "dawn/linux-x86_64",
+            "configurePreset": "dawn/linux-x86_64"
         },
         {
-            "name": "wgpu/x86_64-linux-gnu",
-            "configurePreset": "wgpu/x86_64-linux-gnu"
+            "name": "wgpu/linux-x86_64",
+            "configurePreset": "wgpu/linux-x86_64"
         },
         {
-            "name": "wgpu-static/x86_64-linux-gnu",
-            "configurePreset": "wgpu-static/x86_64-linux-gnu"
+            "name": "wgpu-static/linux-x86_64",
+            "configurePreset": "wgpu-static/linux-x86_64"
         },
         {
-            "name": "dawn/aarch64-linux-gnu",
-            "configurePreset": "dawn/aarch64-linux-gnu"
+            "name": "dawn/linux-aarch64",
+            "configurePreset": "dawn/linux-aarch64"
         },
         {
-            "name": "wgpu/aarch64-linux-gnu",
-            "configurePreset": "wgpu/aarch64-linux-gnu"
+            "name": "wgpu/linux-aarch64",
+            "configurePreset": "wgpu/linux-aarch64"
         },
         {
-            "name": "wgpu-static/aarch64-linux-gnu",
-            "configurePreset": "wgpu-static/aarch64-linux-gnu"
+            "name": "wgpu-static/linux-aarch64",
+            "configurePreset": "wgpu-static/linux-aarch64"
         },
         {
-            "name": "dawn/x86_64-windows",
-            "configurePreset": "dawn/x86_64-windows"
+            "name": "dawn/windows-x86_64",
+            "configurePreset": "dawn/windows-x86_64"
         },
         {
-            "name": "wgpu/x86_64-windows",
-            "configurePreset": "wgpu/x86_64-windows"
+            "name": "wgpu/windows-x86_64",
+            "configurePreset": "wgpu/windows-x86_64"
         },
         {
-            "name": "wgpu-static/x86_64-windows",
-            "configurePreset": "wgpu-static/x86_64-windows"
+            "name": "wgpu-static/windows-x86_64",
+            "configurePreset": "wgpu-static/windows-x86_64"
         },
         {
-            "name": "emscripten/wasm32-emscripten",
-            "configurePreset": "emscripten/wasm32-emscripten"
+            "name": "emscripten/emscripten-wasm32",
+            "configurePreset": "emscripten/emscripten-wasm32"
         }
     ]
 }

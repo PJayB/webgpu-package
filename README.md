@@ -56,15 +56,15 @@ Backends:
 
 Targets:
 
-* `x86_64-linux-gnu`
-* `aarch64-linux-gnu`
-* `x86_64-windows`
-* `wasm32-emscripten`
+* `linux-x86_64`
+* `linux-aarch64`
+* `windows-x86_64`
+* `emscripten-wasm32`
 
 For example, if you are building for Windows with wgpu-static, use:
 
-* Include path: `<install path>/wgpu-static/x86_64-windows/include`
-* Library path: `<install path>/wgpu-static/x86_64-windows/lib`
+* Include path: `<install path>/wgpu-static/windows-x86_64/include`
+* Library path: `<install path>/wgpu-static/windows-x86_64/lib`
 * Link to: `wgpu_native`
 
 # To-Do
