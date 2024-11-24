@@ -22,7 +22,6 @@ This script takes an optional path argument if you wish to customize the install
 
 Set up:
 
-* Clone this repository.
 * Install the dependencies (Debian packages are provided in `auto-build-install.sh`), including for foreign architectures.
 * Run `cmake --list-presets` to see which targets are available.
 
@@ -36,24 +35,36 @@ cmake --install build/<triple> --prefix <destination>
 
 ## Usage
 
-Point your compiler to one of the following subdirectories of `/opt/webgpu-dist`:
+The installed distribution is structured like so:
+
+```
+<install_root>/<wgpu_backend>/<target>/{bin,include,lib}
+```
+
+Where:
+
+* `install_root`: the installation target (`/opt/webgpu-dist` by default)
+* `wgpu_backend`: one of the possible backends listed below
+* `target`: one of the possible targets listed below
+
+Backends:
 
 * `dawn`: the Dawn backend
 * `wgpu`: the wgpu-native shared library backend
 * `wgpu-static`: the wpu-native static libary backend
 * `emscripten`: the Emscripten backend
 
-Within these subdirectories you will find the includes, libraries and binaries for:
+Targets:
 
-* `x86_64-linux-gnu/{bin,include,lib}/...`
-* `aarch64-linux-gnu/{bin,include,lib}/...`
-* `x86_64-w64-msvc/{bin,include,lib}/...`
-* `x86_64-w64-mingw32/{bin,include,lib}/...`
+* `x86_64-linux-gnu`
+* `aarch64-linux-gnu`
+* `x86_64-windows`
+* `wasm32-emscripten`
 
 For example, if you are building for Windows with wgpu-static, use:
 
-* Include path: `<install path>/wgpu-static/x86_64-w64-msvc/include`
-* Library path: `<install path>/wgpu-static/x86_64-w64-msvc/lib`
+* Include path: `<install path>/wgpu-static/x86_64-windows/include`
+* Library path: `<install path>/wgpu-static/x86_64-windows/lib`
 * Link to: `wgpu_native`
 
 # To-Do

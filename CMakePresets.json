@@ -55,11 +55,10 @@
             }
         },
         {
-            "name": "emscripten",
+            "name": "emscripten/wasm32-emscripten",
             "generator": "Ninja",
             "cacheVariables": {
-                "WEBGPU_BACKEND": "EMSCRIPTEN",
-                "EMSDK": "$ENV{EMSDK}"
+                "WEBGPU_BACKEND": "EMSCRIPTEN"
             }
         },
         {
@@ -130,8 +129,8 @@
             "configurePreset": "wgpu-static/x86_64-windows"
         },
         {
-            "name": "emscripten",
-            "configurePreset": "emscripten"
+            "name": "emscripten/wasm32-emscripten",
+            "configurePreset": "emscripten/wasm32-emscripten"
         }
     ]
 }
