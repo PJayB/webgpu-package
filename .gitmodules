@@ -1,0 +1,19 @@
+[submodule "xgb"]
+	path = xgb
+	url = git@github.com:PJayB/xgb.git
+[submodule "webgpu-backend-emscripten"]
+	path = webgpu-backend-emscripten
+	url = https://github.com/eliemichel/WebGPU-distribution
+	branch = fa0b54d68841fb33188403b07959d403b24511de
+[submodule "webgpu-backend-wgpu"]
+	path = webgpu-backend-wgpu
+	url = https://github.com/eliemichel/WebGPU-distribution
+	branch = 54a60379a9d792848a2311856375ceef16db150e
+[submodule "webgpu-backend-wgpu-static"]
+	path = webgpu-backend-wgpu-static
+	url = https://github.com/eliemichel/WebGPU-distribution
+	branch = a54a378066e52358098c51552fe541cf47c44d66
+[submodule "webgpu-backend-dawn"]
+	path = webgpu-backend-dawn
+	url = https://github.com/eliemichel/WebGPU-distribution
+	branch = 50a5be486cd97fda8cd98693bf2561d4d4f86597
