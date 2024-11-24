@@ -73,6 +73,4 @@ For example, if you are building for Windows with wgpu-static, use:
 * The Windows Dawn build cannot be run on Linux build hosts
 * `i686` support for Windows is unimplemented
 
-# Known Issues
-
-* Mingw64 Dawn doesn't build due to problems with the upstream Dawn project
+Note: Dawn doesn't build in Mingw64 due to problems with the upstream Dawn project.
