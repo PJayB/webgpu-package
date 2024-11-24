@@ -69,10 +69,9 @@ For example, if you are building for Windows with wgpu-static, use:
 
 # To-Do
 
-* The default install directory is not configurable when batch-building
 * The Visual Studio (MSVC) builds are untested
-* The MSVC builds also cannot be run on Linux build hosts
-* `i686` support for Windows
+* The Windows Dawn build cannot be run on Linux build hosts
+* `i686` support for Windows is unimplemented
 
 # Known Issues
 
