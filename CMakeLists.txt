@@ -85,7 +85,20 @@ elseif (WEBGPU_BACKEND_U STREQUAL "WGPU_STATIC")
 elseif (WEBGPU_BACKEND_U STREQUAL "DAWN")
     add_subdirectory(webgpu-backend-dawn)
 
-    # TODO: install
+    # Force dawn to build
+    add_library(dawn-phony SHARED)
+    target_link_libraries(dawn-phony PUBLIC webgpu_dawn)
+
+    install(TARGETS
+        webgpu_dawn
+    )
+
+    install(
+        DIRECTORY
+            "webgpu-backend-dawn/include/webgpu"
+        DESTINATION
+            "${CMAKE_INSTALL_INCLUDEDIR}"
+    )
 
 else()
     message(FATAL_ERROR "Invalid value for WEBGPU_BACKEND: possible values are EMSCRIPTEN, WGPU, WGPU_STATIC and DAWN, but '${WEBGPU_BACKEND_U}' was provided.")

@@ -15,7 +15,7 @@ done < <(cat presets.lst; echo)
 while read -r preset ; do
     if [ -n "$preset" ] && [[ $preset != \#* ]] ; then
         echo "${banner} Building $preset ${banner}"
-        cmake --build --preset "$preset"
+        cmake --build --preset "$preset" --config Release
     fi
 done < <(cat presets.lst; echo)
 
