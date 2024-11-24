@@ -97,6 +97,24 @@ elseif (WEBGPU_BACKEND_U STREQUAL "DAWN")
         DESTINATION
             "${CMAKE_INSTALL_INCLUDEDIR}"
     )
+    install(
+        DIRECTORY
+            "${CMAKE_BINARY_DIR}/_deps/dawn-src/include/webgpu"
+        DESTINATION
+            "${CMAKE_INSTALL_INCLUDEDIR}"
+    )
+    install(
+        DIRECTORY
+            "${CMAKE_BINARY_DIR}/_deps/dawn-build/gen/include/dawn"
+        DESTINATION
+            "${CMAKE_INSTALL_INCLUDEDIR}"
+    )
+    install(
+        DIRECTORY
+            "${CMAKE_BINARY_DIR}/_deps/dawn-build/gen/include/webgpu"
+        DESTINATION
+            "${CMAKE_INSTALL_INCLUDEDIR}"
+    )
 
 else()
     message(FATAL_ERROR "Invalid value for WEBGPU_BACKEND: possible values are EMSCRIPTEN, WGPU, WGPU_STATIC and DAWN, but '${WEBGPU_BACKEND_U}' was provided.")
