@@ -1,0 +1,18 @@
+linux-x86_64-wgpu
+linux-x86_64-wgpu-static
+
+linux-aarch64-wgpu
+linux-aarch64-wgpu-static
+
+emscripten
+
+windows-msvc-wgpu
+windows-msvc-wgpu-static
+windows-mingw64-wgpu
+windows-mingw64-wgpu-static
+
+#linux-x86_64-dawn
+#linux-aarch64-dawn
+#windows-mingw64-dawn
+# todo: windows-msvc-dawn
+

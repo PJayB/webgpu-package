@@ -1,0 +1,242 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 24,
+      "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "linux-x86_64-dawn",
+            "displayName": "Linux x86_64 Dawn",
+            "description": "x86_64 Linux Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/x86_64-linux-gnu-dawn",
+            "installDir": "/opt/webgpu-dist/dawn/x86_64-linux-gnu",
+            "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-linux-gnu-gcc.cmake",
+            "cacheVariables": {
+                "WEBGPU_BACKEND": "DAWN"
+            }
+        },
+        {
+            "name": "linux-x86_64-wgpu",
+            "displayName": "Linux x86_64 WGPU",
+            "description": "x86_64 Linux Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/x86_64-linux-gnu-wgpu",
+            "installDir": "/opt/webgpu-dist/wgpu/x86_64-linux-gnu",
+            "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-linux-gnu-gcc.cmake",
+            "cacheVariables": {
+                "WEBGPU_BACKEND": "WGPU"
+            }
+        },
+        {
+            "name": "linux-x86_64-wgpu-static",
+            "displayName": "Linux x86_64 WGPU Static",
+            "description": "x86_64 Linux Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/x86_64-linux-gnu-wgpu-static",
+            "installDir": "/opt/webgpu-dist/wgpu-static/x86_64-linux-gnu",
+            "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-linux-gnu-gcc.cmake",
+            "cacheVariables": {
+                "WEBGPU_BACKEND": "WGPU_STATIC"
+            }
+        },
+        {
+            "name": "linux-aarch64-dawn",
+            "displayName": "Linux aarch64 Dawn",
+            "description": "aarch64 Linux Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/aarch64-linux-gnu-dawn",
+            "installDir": "/opt/webgpu-dist/dawn/aarch64-linux-gnu",
+            "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/aarch64-linux-gnu-gcc.cmake",
+            "cacheVariables": {
+                "WEBGPU_BACKEND": "DAWN"
+            }
+        },
+        {
+            "name": "linux-aarch64-wgpu",
+            "displayName": "Linux aarch64 WGPU",
+            "description": "aarch64 Linux Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/aarch64-linux-gnu-wgpu",
+            "installDir": "/opt/webgpu-dist/wgpu/aarch64-linux-gnu",
+            "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/aarch64-linux-gnu-gcc.cmake",
+            "cacheVariables": {
+                "WEBGPU_BACKEND": "WGPU"
+            }
+        },
+        {
+            "name": "linux-aarch64-wgpu-static",
+            "displayName": "Linux aarch64 WGPU Static",
+            "description": "aarch64 Linux Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/aarch64-linux-gnu-wgpu-static",
+            "installDir": "/opt/webgpu-dist/wgpu-static/aarch64-linux-gnu",
+            "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/aarch64-linux-gnu-gcc.cmake",
+            "cacheVariables": {
+                "WEBGPU_BACKEND": "WGPU_STATIC"
+            }
+        },
+        {
+            "name": "emscripten",
+            "displayName": "Emscripten",
+            "description": "Emscripten Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/emscripten",
+            "installDir": "/opt/webgpu-dist/emscripten",
+            "cacheVariables": {
+                "WEBGPU_BACKEND": "EMSCRIPTEN",
+                "EMSDK": "$ENV{EMSDK}"
+            }
+        },
+        {
+            "name": "windows-mingw64-dawn",
+            "displayName": "Windows Mingw64 Dawn",
+            "description": "x64 Mingw Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/x86_64-w64-mingw32-dawn",
+            "installDir": "/opt/webgpu-dist/dawn/x86_64-w64-mingw32",
+            "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-w64-mingw32-gcc.cmake",
+            "cacheVariables": {
+                "WEBGPU_BACKEND": "DAWN"
+            }
+        },
+        {
+            "name": "windows-mingw64-wgpu",
+            "displayName": "Windows Mingw64 WGPU",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/x86_64-w64-mingw32-wgpu",
+            "installDir": "/opt/webgpu-dist/wgpu/x86_64-w64-mingw32",
+            "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-w64-mingw32-gcc.cmake",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER_FORCED": "1",
+                "CMAKE_CXX_COMPILER_FORCED": "1",
+                "CMAKE_SYSTEM_NAME": "Windows",
+                "CMAKE_SYSTEM_PROCESSOR": "x86_64",
+                "WEBGPU_BACKEND": "WGPU"
+            }
+        },
+        {
+            "name": "windows-mingw64-wgpu-static",
+            "displayName": "Windows Mingw64 WGPU Static",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/x86_64-w64-mingw32-wgpu-static",
+            "installDir": "/opt/webgpu-dist/wgpu-static/x86_64-w64-mingw32",
+            "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-w64-mingw32-gcc.cmake",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER_FORCED": "1",
+                "CMAKE_CXX_COMPILER_FORCED": "1",
+                "CMAKE_SYSTEM_NAME": "Windows",
+                "CMAKE_SYSTEM_PROCESSOR": "x86_64",
+                "WEBGPU_BACKEND": "WGPU_STATIC"
+            }
+        },
+        {
+            "name": "windows-msvc-dawn",
+            "displayName": "Windows VS2022 Dawn",
+            "description": "Visual Studio 2022 Project Generator",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/build/x86_64-w64-msvc-dawn",
+            "installDir": "/opt/webgpu-dist/dawn/x86_64-w64-msvc",
+            "cacheVariables": {
+                "WEBGPU_BACKEND": "DAWN"
+            }
+        },
+        {
+            "name": "windows-msvc-wgpu",
+            "displayName": "Windows WGPU",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/x86_64-w64-msvc-wgpu",
+            "installDir": "/opt/webgpu-dist/wgpu/x86_64-w64-msvc",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER_FORCED": "1",
+                "CMAKE_CXX_COMPILER_FORCED": "1",
+                "CMAKE_SYSTEM_NAME": "Windows",
+                "CMAKE_SYSTEM_PROCESSOR": "x86_64",
+                "WEBGPU_BACKEND": "WGPU"
+            }
+        },
+        {
+            "name": "windows-msvc-wgpu-static",
+            "displayName": "Windows WGPU Static",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/x86_64-w64-msvc-wgpu-static",
+            "installDir": "/opt/webgpu-dist/wgpu-static/x86_64-w64-msvc",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER_FORCED": "1",
+                "CMAKE_CXX_COMPILER_FORCED": "1",
+                "CMAKE_SYSTEM_NAME": "Windows",
+                "CMAKE_SYSTEM_PROCESSOR": "x86_64",
+                "WEBGPU_BACKEND": "WGPU_STATIC"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "linux-x86_64-dawn",
+            "displayName": "Linux x86_64 Dawn",
+            "configurePreset": "linux-x86_64-dawn"
+        },
+        {
+            "name": "linux-x86_64-wgpu",
+            "displayName": "Linux x86_64 WGPU",
+            "configurePreset": "linux-x86_64-wgpu"
+        },
+        {
+            "name": "linux-x86_64-wgpu-static",
+            "displayName": "Linux x86_64 WGPU Static",
+            "configurePreset": "linux-x86_64-wgpu-static"
+        },
+        {
+            "name": "linux-aarch64-dawn",
+            "displayName": "Linux aarch64 Dawn",
+            "configurePreset": "linux-aarch64-dawn"
+        },
+        {
+            "name": "linux-aarch64-wgpu",
+            "displayName": "Linux aarch64 WGPU",
+            "configurePreset": "linux-aarch64-wgpu"
+        },
+        {
+            "name": "linux-aarch64-wgpu-static",
+            "displayName": "Linux aarch64 WGPU Static",
+            "configurePreset": "linux-aarch64-wgpu-static"
+        },
+        {
+            "name": "windows-mingw64-dawn",
+            "displayName": "Windows Mingw64 Dawn",
+            "configurePreset": "windows-mingw64-dawn"
+        },
+        {
+            "name": "windows-mingw64-wgpu",
+            "displayName": "Windows Mingw64 WGPU",
+            "configurePreset": "windows-mingw64-wgpu"
+        },
+        {
+            "name": "windows-mingw64-wgpu-static",
+            "displayName": "Windows Mingw64 WGPU Static",
+            "configurePreset": "windows-mingw64-wgpu-static"
+        },
+        {
+            "name": "windows-msvc-dawn",
+            "displayName": "Windows Dawn",
+            "configurePreset": "windows-msvc-dawn"
+        },
+        {
+            "name": "windows-msvc-wgpu",
+            "displayName": "Windows WGPU",
+            "configurePreset": "windows-msvc-wgpu"
+        },
+        {
+            "name": "windows-msvc-wgpu-static",
+            "displayName": "Windows WGPU Static",
+            "configurePreset": "windows-msvc-wgpu-static"
+        },
+        {
+            "name": "emscripten",
+            "displayName": "Emscripten",
+            "configurePreset": "emscripten"
+        }
+    ]
+}
