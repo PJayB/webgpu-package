@@ -1,6 +1,6 @@
 # WebGPU Precompiled Binaries
 
-This pulls [Elie Michel's `WebGPU-distribution` package](https://github.com/eliemichel/WebGPU-distribution) and installs the binaries to `/opt/webgpu-dist` (by default).
+This pulls [Elie Michel's `WebGPU-distribution` package](https://github.com/eliemichel/WebGPU-distribution) and enables installation via `cmake --install`.
 
 ## Motivation
 
