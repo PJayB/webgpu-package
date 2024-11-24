@@ -1,6 +1,6 @@
 [submodule "xgb"]
 	path = xgb
-	url = git@github.com:PJayB/xgb.git
+	url = https://github.com/PJayB/xgb.git
 [submodule "webgpu-backend-emscripten"]
 	path = webgpu-backend-emscripten
 	url = https://github.com/eliemichel/WebGPU-distribution
