@@ -9,6 +9,8 @@
         {
             "name": "dawn/linux-x86_64",
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/dawn/linux-x86_64",
+            "installDir": "${sourceDir}/install/dawn/linux-x86_64",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-linux-gnu-gcc.cmake",
             "cacheVariables": {
                 "WEBGPU_BACKEND": "DAWN"
@@ -17,6 +19,8 @@
         {
             "name": "wgpu/linux-x86_64",
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/wgpu/linux-x86_64",
+            "installDir": "${sourceDir}/install/wgpu/linux-x86_64",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-linux-gnu-gcc.cmake",
             "cacheVariables": {
                 "WEBGPU_BACKEND": "WGPU"
@@ -25,6 +29,8 @@
         {
             "name": "wgpu-static/linux-x86_64",
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/wgpu-static/linux-x86_64",
+            "installDir": "${sourceDir}/install/wgpu-static/linux-x86_64",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/x86_64-linux-gnu-gcc.cmake",
             "cacheVariables": {
                 "WEBGPU_BACKEND": "WGPU_STATIC"
@@ -33,6 +39,8 @@
         {
             "name": "dawn/linux-aarch64",
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/dawn/linux-aarch64",
+            "installDir": "${sourceDir}/install/dawn/linux-aarch64",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/aarch64-linux-gnu-gcc.cmake",
             "cacheVariables": {
                 "WEBGPU_BACKEND": "DAWN"
@@ -41,6 +49,8 @@
         {
             "name": "wgpu/linux-aarch64",
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/wgpu/linux-aarch64",
+            "installDir": "${sourceDir}/install/wgpu/linux-aarch64",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/aarch64-linux-gnu-gcc.cmake",
             "cacheVariables": {
                 "WEBGPU_BACKEND": "WGPU"
@@ -49,6 +59,8 @@
         {
             "name": "wgpu-static/linux-aarch64",
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/wgpu-static/linux-aarch64",
+            "installDir": "${sourceDir}/install/wgpu-static/linux-aarch64",
             "toolchainFile": "${sourceDir}/xgb/cmake/toolchain/aarch64-linux-gnu-gcc.cmake",
             "cacheVariables": {
                 "WEBGPU_BACKEND": "WGPU_STATIC"
@@ -57,6 +69,8 @@
         {
             "name": "emscripten/emscripten-wasm32",
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/emscripten/emscripten-wasm32",
+            "installDir": "${sourceDir}/install/emscripten/emscripten-wasm32",
             "cacheVariables": {
                 "WEBGPU_BACKEND": "EMSCRIPTEN"
             }
@@ -64,6 +78,8 @@
         {
             "name": "dawn/windows-x86_64",
             "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/build/dawn/windows-x86_64",
+            "installDir": "${sourceDir}/install/dawn/windows-x86_64",
             "cacheVariables": {
                 "WEBGPU_BACKEND": "DAWN"
             }
@@ -71,6 +87,8 @@
         {
             "name": "wgpu/windows-x86_64",
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/wgpu/windows-x86_64",
+            "installDir": "${sourceDir}/install/wgpu/windows-x86_64",
             "cacheVariables": {
                 "CMAKE_C_COMPILER_FORCED": "1",
                 "CMAKE_CXX_COMPILER_FORCED": "1",
@@ -82,6 +100,8 @@
         {
             "name": "wgpu-static/windows-x86_64",
             "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/wgpu-static/windows-x86_64",
+            "installDir": "${sourceDir}/install/wgpu-static/windows-x86_64",
             "cacheVariables": {
                 "CMAKE_C_COMPILER_FORCED": "1",
                 "CMAKE_CXX_COMPILER_FORCED": "1",
